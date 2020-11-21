@@ -1,7 +1,5 @@
 package org.masingerzero.modernjava;
 
-public class Main {
-
-
-	
+enum Color {
+	GREEN, RED
 }
