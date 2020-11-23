@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class UsingFunctionalInterfaces {
@@ -33,6 +34,13 @@ public class UsingFunctionalInterfaces {
 			a.setWeight(a.getWeight() * 1000);
 		});
 		System.out.println(inventory);
+		
+		
+		//////////////////
+		// Function<T, R>
+		//////////////////
+		List<Integer> appleWeights = map(inventory, (Apple a) -> a.getWeight());
+		System.out.println(appleWeights);
 
 	}
 
@@ -53,5 +61,43 @@ public class UsingFunctionalInterfaces {
 			c.accept(t);
 		}
 	}
+	
+	//Method thas uses Function<T,R> functional interface
+	private static <T, R> List<R> map(List<T> list, Function<T, R> f) {
+		List<R> result = new ArrayList<>();
+		for (T t : list) {
+			result.add(f.apply(t));
+		}
+		return result;
+	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
