@@ -20,7 +20,7 @@ public class Sandbox {
 			System.out.println(s);
 		};
 		
-		
+		///
 		Supplier<List<String>> s = () -> Arrays.asList("one", "two", "three");
 		
 		BiFunction<Integer, Double, String> bf = (Integer i, Double d) -> String.format("i = %d and d= %d", i,d);
