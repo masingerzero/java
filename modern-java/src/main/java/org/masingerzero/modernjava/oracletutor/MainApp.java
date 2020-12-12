@@ -57,7 +57,7 @@ public class MainApp {
 
 		System.out.println("----------------------------------------------------------------------------------------");
 		
-		// Mio
+		// MINE
 		PersonManager.printFilteredList(roster, p -> p.getAge() > 50);
 
 	}
