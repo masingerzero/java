@@ -14,6 +14,7 @@ public class MyFilteringApples2 {
 		List<Apple> inventory = Arrays.asList(new Apple(80, Color.GREEN), new Apple(155, Color.GREEN),
 				new Apple(120, Color.RED));
 
+		List<Double> ints = Arrays.asList(1d, 2d, 3d);
 //		List<Apple> greenApples = filterApples(inventory, MyFilteringApples2::isGreenApple);
 //		System.out.println(greenApples);
 //		
@@ -38,8 +39,9 @@ public class MyFilteringApples2 {
 		// prettyPrintApple(inventory, new PrintAppleWeight());
 		// prettyPrintApple(inventory, new PrintAppleInfo());
 
-		List<Apple> filteredList = filter(inventory, (Apple a) -> GREEN.equals(a.getColor()));
-		System.out.println(filteredList);
+		filter(inventory, a -> GREEN.equals(GREEN));
+		filter(ints, a -> GREEN.equals(GREEN));
+//		System.out.println(filteredList);
 
 		List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 		List<Integer> evenNumbers = filter(integers, (Integer i) -> i % 2 == 0);
